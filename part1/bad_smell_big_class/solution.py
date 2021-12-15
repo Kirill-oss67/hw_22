@@ -26,7 +26,7 @@ class Tree:
         pass
 
 class Trap:
-    def trap_attack(self):
+    def attack(self):
         pass
 
 if __name__ == '__main__':
