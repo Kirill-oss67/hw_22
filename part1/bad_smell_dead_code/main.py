@@ -31,3 +31,6 @@ class Main:
         self.field = Field()
         self.unit = Unit()
         self.unit.move(field=self.field)
+
+if __name__ == "__main__":
+    main = Main()

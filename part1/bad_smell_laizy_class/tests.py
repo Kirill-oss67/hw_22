@@ -20,3 +20,6 @@ class ClassTestCase(SkyproTestCase):
             hasattr(main, 'FieldAdapter'),
             "%@Кажется, ненужный класс всё еще существует"
         )
+
+if __name__ == "__main__":
+    unittest.main()
