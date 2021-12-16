@@ -16,7 +16,7 @@ from ttools.skyprotests.tests import SkyproTestCase  # noqa: E402
 class ClassTestCase(SkyproTestCase):
 
     def test_module_has_expected_classes(self):
-        expected_classes = ['Unit', 'Healer', 'Tree', 'Trap']
+        expected_classes = ['Warrior', 'Healer', 'Tree', 'Trap']
         for cls in expected_classes:
             self.assertTrue(
                 hasattr(main, cls),
@@ -24,7 +24,7 @@ class ClassTestCase(SkyproTestCase):
             )
         
     def test_class_Unit_has_expected_methods(self):
-        inspected_class = main.Unit
+        inspected_class = main.Warrior
         expected_methods = ['attack', 'defence', 'move']
         
         object_methods = [
@@ -37,7 +37,7 @@ class ClassTestCase(SkyproTestCase):
             )
 
     def test_class_Unit_has_expected_methods(self):
-        inspected_class = main.Unit
+        inspected_class = main.Warrior
         expected_methods = ['attack', 'defense', 'move']
         
         object_methods = [

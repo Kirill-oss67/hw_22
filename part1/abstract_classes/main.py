@@ -23,3 +23,19 @@
 # код должен выполняться не выбрасывая исключений
 
 # TODO напишите Ваш код здесь
+
+
+
+# Отрезок кода для самопроверки. 
+# Запустите его, после того как выполните задание
+if __name__ == '__main__':
+    boat = Boat()
+    car = Car()
+    kamikadze = Electroscooter()
+
+    person = Person()
+    person.use_transport(boat)
+    print('=' * 10)
+    person.use_transport(car)
+    print('=' * 10)
+    person.use_transport(kamikadze)

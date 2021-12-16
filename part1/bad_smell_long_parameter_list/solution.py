@@ -1,12 +1,4 @@
-from typing import List
-
-
 class Unit:
-    field: Field
-    speed: int
-    state: str  # (fly, crawl)
-    x: int
-    y: int
 
     # ...
     def __init__(self):

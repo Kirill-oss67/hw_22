@@ -16,7 +16,7 @@ from ttools.skyprotests.tests import SkyproTestCase  # noqa: E402
 class ClassTestCase(SkyproTestCase):
     
     def test_class_Unit_has_expected_methods(self):
-        self.assertTrue(
+        self.assertFalse(
             hasattr(main, 'FieldAdapter'),
             "%@Кажется, ненужный класс всё еще существует"
         )

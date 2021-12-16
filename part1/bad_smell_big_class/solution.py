@@ -1,4 +1,4 @@
-class Unit:
+class Warrior:
     def attack(self):
         pass
 
@@ -30,6 +30,6 @@ class Trap:
         pass
 
 if __name__ == '__main__':
-    unit = Unit()
+    unit = Warrior()
     healer = Healer()
     trap = Trap()
