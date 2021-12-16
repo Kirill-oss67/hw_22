@@ -24,8 +24,8 @@ class ClassTestCase(SkyproTestCase):
             )
 
     def test_module_has_expected_classes(self):
-        expected_classes = ['GameItem', ]
-        for cls in expected_classes:
+        unexpected_classes = ['GameItem', ]
+        for cls in unexpected_classes:
             self.assertFalse(
                 hasattr(main, cls),
                 f"%@Кажется, ненужный класс всё еще присутствует в модуле.."
