@@ -5,6 +5,7 @@ class SomeClass:
     def sorted_func(self):
         return sorted(self.lst, reverse=False)
 
+
 if __name__ == "__main__":
     some_inst = SomeClass()
     print(some_inst.sorted_func())
