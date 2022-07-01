@@ -1,8 +1,12 @@
-class Unit:
+class Unit1:
 
     # ...
-    def __init__(self):
-        pass
+    def __init__(self, field, x_coord, y_coord, state):
+        self.field = field
+        self.x = x_coord
+        self.y = y_coord
+        self.state = state
+        self.speed = 1
 
     def move(self, direction):
         speed = self._get_speed()
@@ -23,3 +27,20 @@ class Unit:
             return self.speed * 0.5
         else:
             raise ValueError('Эк тебя раскорячило')
+
+
+class Unit:
+    def __init__(self, state):
+        self.state = state
+        self.speed = 1
+
+    def _get_speed(self):
+        if self.state == 'fly':
+            return self.speed * 1.2
+        elif self.state == 'crawl':
+            return self.speed * 0.5
+        else:
+            raise ValueError('Эк тебя раскорячило')
+
+# yami = Unit('fly')
+# print(yami.get_speed())

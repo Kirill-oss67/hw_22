@@ -13,8 +13,8 @@ class Unit:
     def defense(self):
         pass
 
-    def move(self, field_adapter):
-        field_adapter.set_unit(x=self.x, y=self.y, unit=self)
+    def move(self, field):
+        field.set_unit(x=self.x, y=self.y, unit=self)
 
 
 class Field:
@@ -22,17 +22,9 @@ class Field:
         pass
 
 
-class FieldAdapter:
-    def __init__(self, field: Field):
-        self.field = field
-
-    def set_unit(self, x, y, unit: Unit):
-        self.field.set_unit(x, y, unit)
-
 
 class Main:
     def __init__(self):
         self.field = Field()
-        self.field_adapter = FieldAdapter(field=self.field)
         self.unit = Unit()
-        self.unit.move(field_adapter=self.field_adapter)
+        self.unit.move(field=self.field)
