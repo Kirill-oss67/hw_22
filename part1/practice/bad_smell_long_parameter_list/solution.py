@@ -1,4 +1,4 @@
-class Unit1:
+class Unit:
 
     # ...
     def __init__(self, field, x_coord, y_coord, state):
@@ -29,18 +29,3 @@ class Unit1:
             raise ValueError('Эк тебя раскорячило')
 
 
-class Unit:
-    def __init__(self, state):
-        self.state = state
-        self.speed = 1
-
-    def _get_speed(self):
-        if self.state == 'fly':
-            return self.speed * 1.2
-        elif self.state == 'crawl':
-            return self.speed * 0.5
-        else:
-            raise ValueError('Эк тебя раскорячило')
-
-# yami = Unit('fly')
-# print(yami.get_speed())

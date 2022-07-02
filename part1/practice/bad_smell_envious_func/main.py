@@ -14,6 +14,11 @@ class Cube:
         return self.x * self.y * self.z
 
 
-cube = Cube(1,7,22)
-print(cube.calc_cube_volume())
+class get_cube_volume:
+    @staticmethod
+    def get_volube(cube):
+        return cube.calc_cube_volume
 
+
+cube = Cube(1, 7, 22)
+print(cube.calc_cube_volume())

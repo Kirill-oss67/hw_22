@@ -41,6 +41,80 @@
 
 # TODO напишите Ваш код здесь
 
+from abc import ABC, abstractmethod
+
+
+class Transport(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+    @abstractmethod
+    def stop_engine(self):
+        pass
+
+    @abstractmethod
+    def move(self):
+        pass
+
+    @abstractmethod
+    def stop(self):
+        pass
+
+
+class Boat(Transport):
+    def start_engine(self):
+        print('Двигатель катера запущен')
+
+    def stop_engine(self):
+        print('Двигатель катера заглушен')
+
+    def move(self):
+        print('Катер движется')
+
+    def stop(self):
+        print('Катер остановился')
+
+
+class Car(Transport):
+    def start_engine(self):
+        print('Двигатель автомобиля запущен')
+
+    def stop_engine(self):
+        print('Двигатель автомобиля заглушен')
+
+    def move(self):
+        print('Автомобиль движется')
+
+    def stop(self):
+        print('Автомобиль остановился')
+
+
+class Electroscooter(Transport):
+    def start_engine(self):
+        print('Двигатель электроскутера запущен')
+
+    def stop_engine(self):
+        print('Двигатель электроскутера заглушен')
+
+    def move(self):
+        print('Электроскутер движется')
+
+    def stop(self):
+        print('Электроскутер остановился')
+
+
+# Создайте класс Person у которого будет один единственный метод use_transport.
+# В данный метод в качестве параметра должен передаваться объект реализующий интерфейс Transport
+# Метод для этого объекта должен запускать двигатель, двигаться куда-то, тормозить и глушить двигатель.
+
+class Person:
+    def use_transport(self, object):
+        object.start_engine()
+        object.stop()
+        object.move()
+        object.stop_engine()
+
 
 # Отрезок кода для самопроверки.
 # Запустите его, после того как выполните задание
